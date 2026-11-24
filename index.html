@@ -331,6 +331,22 @@
     .cta h2::before { width:72px; height:72px; margin-bottom:28px; }
     .cta h2::after { font-size:17px; }
   }
+  /* Pasha's photo inside the CTA card: black background melts into the navy (lighten blend) */
+  .cta .wrap > * { position:relative; z-index:1; }
+  .cta .wrap::after { content:""; position:absolute; z-index:0; right:3%; bottom:0; width:50%; height:100%; pointer-events:none;
+    background:url("pavel-cta.jpg") center bottom/contain no-repeat; mix-blend-mode:lighten;
+    -webkit-mask-image:linear-gradient(to right, transparent 0, #000 14%, #000 86%, transparent 100%); mask-image:linear-gradient(to right, transparent 0, #000 14%, #000 86%, transparent 100%); }
+  @media (min-width:761px) {
+    .cta .wrap { text-align:left; padding:88px 48% 96px 64px; min-height:540px; }
+    .cta h2 { margin:0; }
+    .cta h2::before { margin:0 0 36px; }
+    .cta h2::after { margin:20px 0 0; }
+    .cta .actions { justify-content:flex-start; }
+  }
+  @media (max-width:760px) {
+    .cta .wrap { padding-bottom:0; }
+    .cta .wrap::after { position:relative; display:block; right:auto; width:100%; height:300px; margin-top:28px; }
+  }
 
 </style>
 </head>
@@ -376,7 +392,7 @@ document.addEventListener('DOMContentLoaded', function () {
       <div class="video-wrap">
         <!-- VIDEO SLOT: add {"video": {"url": "...mp4", "poster": "...jpg", "duration": "1:00"}} to content.json -->
         <div class="video-card placeholder">
-          <div class="video-head"><span class="avatar">P</span><div><b>Pasha</b><br><small>Candidate · Senior Product Manager – Core</small></div></div>
+          <div class="video-head"><img class="avatar" src="pavel-avatar.jpg" alt="Pasha"><div><b>Pasha</b><br><small>Candidate · Senior Product Manager – Core</small></div></div>
           <div class="video-slot"><span class="play">▶</span><span>A 60-second hello is on its way</span></div>
           <div class="video-foot"><span>Video for SplitMetrics</span><span>~1:00</span></div>
         </div>
