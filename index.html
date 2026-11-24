@@ -313,9 +313,7 @@
       radial-gradient(circle at 7.5% 20%, rgba(255,255,255,.16) 0 94px, transparent 95px),
       radial-gradient(circle at 18% 20%, rgba(255,255,255,.08) 0 94px, transparent 95px),
       radial-gradient(circle at 13% 100%, rgba(255,255,255,.08) 0 190px, transparent 191px),
-      radial-gradient(circle at 73% 36%, rgba(255,255,255,.09) 0 94px, transparent 95px),
       radial-gradient(circle at 92% 0%, rgba(255,255,255,.08) 0 185px, transparent 186px),
-      radial-gradient(circle at 95% 92%, rgba(255,255,255,.10) 0 94px, transparent 95px),
       repeating-linear-gradient(90deg, transparent 0 125px, rgba(255,255,255,.12) 125px 126px),
       #09072b; }
   .cta h2 { color:#ffffff; margin:0 auto; max-width:820px; font-size:clamp(34px,4.4vw,56px); line-height:1.1; }
@@ -333,11 +331,11 @@
   }
   /* Pasha's photo inside the CTA card: black background melts into the navy (lighten blend) */
   .cta .wrap > * { position:relative; z-index:1; }
-  .cta .wrap::after { content:""; position:absolute; z-index:0; right:3%; bottom:0; width:50%; height:100%; pointer-events:none;
+  .cta .wrap::after { content:""; position:absolute; z-index:0; right:0; bottom:0; width:56%; height:100%; pointer-events:none;
     background:url("pavel-cta.jpg") center bottom/contain no-repeat; mix-blend-mode:lighten;
-    -webkit-mask-image:linear-gradient(to right, transparent 0, #000 14%, #000 86%, transparent 100%); mask-image:linear-gradient(to right, transparent 0, #000 14%, #000 86%, transparent 100%); }
+    -webkit-mask-image:linear-gradient(to right, transparent 0, #000 7%, #000 93%, transparent 100%); mask-image:linear-gradient(to right, transparent 0, #000 7%, #000 93%, transparent 100%); }
   @media (min-width:761px) {
-    .cta .wrap { text-align:left; padding:88px 48% 96px 64px; min-height:540px; }
+    .cta .wrap { text-align:left; padding:96px 52% 104px 64px; min-height:600px; }
     .cta h2 { margin:0; }
     .cta h2::before { margin:0 0 36px; }
     .cta h2::after { margin:20px 0 0; }
@@ -345,7 +343,7 @@
   }
   @media (max-width:760px) {
     .cta .wrap { padding-bottom:0; }
-    .cta .wrap::after { position:relative; display:block; right:auto; width:100%; height:300px; margin-top:28px; }
+    .cta .wrap::after { position:relative; display:block; right:auto; width:calc(100% + 40px); margin-left:-20px; height:400px; margin-top:28px; }
   }
 
 </style>
